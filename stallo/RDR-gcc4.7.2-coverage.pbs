@@ -33,7 +33,7 @@ git clone -b Rob-API git@gitlab.com:PCMSolver/pcmsolver.git $TMP_DIR
 
 cd $TMP_DIR
 
-./setup --fc=gfortran --cc=gcc --cxx=g++ --coverage --python=$PYTHON -D BUILDNAME=${build_name} -D SITE=${site_name}
+python setup.py --fc=gfortran --cc=gcc --cxx=g++ --coverage --python=$PYTHON --cmake-options='-DBUILDNAME=${build_name} -DSITE=${site_name}'
 
 cd $TMP_DIR/build
 

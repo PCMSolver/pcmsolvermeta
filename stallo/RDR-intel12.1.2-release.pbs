@@ -33,7 +33,7 @@ git clone -b Rob-API git@gitlab.com:PCMSolver/pcmsolver.git $TMP_DIR
 
 cd $TMP_DIR
 
-./setup --fc=ifort --cc=icc --cxx=icpc --type=release --python=$PYTHON -D BUILDNAME=${build_name} -D SITE=${site_name}
+python setup.py --fc=ifort --cc=icc --cxx=icpc --type=release --python=$PYTHON --cmake-options='-DBUILDNAME=${build_name} -DSITE=${site_name}'
 
 cd $TMP_DIR/build
 
