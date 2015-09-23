@@ -16,13 +16,9 @@ git clone -b Rob-API git@gitlab.com:PCMSolver/pcmsolver.git $TMP_DIR
 
 cd $TMP_DIR
 
-./setup --fc=gfortran --cc=clang --cxx=clang++ --type=debug -D BUILDNAME=RDR-MacOS-10.10.4-clang3.5-debug -D SITE=merzbow --python=/usr/local/bin/python
+python setup.py --fc=gfortran --cc=clang --cxx=clang++ --type=debug --python=/usr/local/bin/python --cmake-options='-DBUILDNAME=RDR-MacOS-10.10-clang3.5-debug -DSITE=merzbow' 
 
-cd $TMP_DIR/objdir
-
-export PCMSolverDATADIR=$TMP_DIR/lib
-mkdir -p $PCMSolver_TMPDIR/pcmsolverscr
-export PCMSolver_SCRATCH=$PCMSolver_TMPDIR/pcmsolverscr
+cd $TMP_DIR/build
 
 ctest -D Nightly -j$NPROCS
 
