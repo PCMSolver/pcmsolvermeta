@@ -12,7 +12,8 @@ import string
 
 def extractor():
     # Read copyright notice from file
-    with open(os.getcwd()+'/tools/copyright_notice.txt', 'r') as myfile:
+    curdir = os.path.dirname(os.path.realpath(__file__))
+    with open(curdir+'/copyright_notice.txt', 'r') as myfile:
         notice = myfile.readlines()
     # Form copyright notice comment
     pcmsolver_copyright_fortran = '\n'

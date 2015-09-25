@@ -17,8 +17,8 @@ from extract_notice import extractor
 
 options = """
 Usage:
-    ./pcmsolver.py [options] [<filenames>]
-    ./pcmsolver.py (-h | --help)
+    ./update_copyright.py [options] [<filenames>]
+    ./update_copyright.py (-h | --help)
 
 Options:
   --lang=<LANGUAGE> Programming language of the file <CXX/C/F> [default: CXX].
