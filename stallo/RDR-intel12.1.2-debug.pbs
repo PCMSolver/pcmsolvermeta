@@ -17,7 +17,7 @@ ifort --version
 icc --version
 icpc --version
 
-export build_name=RDR-CentOS-6.6-gcc4.7.2-coverage
+export build_name=RDR-CentOS-6.6-intel12.1.2-debug
 export site_name=stallo.uit.no
 PCMSolver_TMPDIR=/local/work/roberto/pcmscratch-${build_name}
 export PCMSolver_TMPDIR
