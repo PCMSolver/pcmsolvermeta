@@ -12,7 +12,7 @@ export CTEST_MAKE_NUM_PROCS=$NPROCS
 TMP_DIR=/Users/roberto/Scratch/tmprunpcmsolver/RDR-clang3.5-debug
 mkdir -p $TMP_DIR
 
-git clone -b Rob-API git@gitlab.com:PCMSolver/pcmsolver.git $TMP_DIR
+git clone git@gitlab.com:PCMSolver/pcmsolver.git $TMP_DIR
 
 cd $TMP_DIR
 
