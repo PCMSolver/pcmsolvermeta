@@ -29,11 +29,11 @@ export PYTHON=`which python`
 TMP_DIR=/global/work/roberto/tmprunpcmsolver/${build_name}
 mkdir -p $TMP_DIR
 
-git clone -b Rob-API git@gitlab.com:PCMSolver/pcmsolver.git $TMP_DIR
+git clone git@gitlab.com:PCMSolver/pcmsolver.git $TMP_DIR
 
 cd $TMP_DIR
 
-python setup.py --fc=ifort --cc=icc --cxx=icpc --type=debug --python=$PYTHON --cmake-options='-DBUILDNAME=${build_name} -DSITE=${site_name}'
+python setup.py --fc=ifort --cc=icc --cxx=icpc --type=debug --python=$PYTHON --cmake-options='-DBUILDNAME=${build_name} -DSITE=${site_name} -DFORCE_CUSTOM_BOOST=ON'
 
 cd $TMP_DIR/build
 
