@@ -35,7 +35,7 @@ git clone git@gitlab.com:PCMSolver/pcmsolver.git $TMP_DIR
 
 cd $TMP_DIR
 
-python setup.py --fc=ifort --cc=icc --cxx=icpc --type=debug --python=$PYTHON --cmake-options='-DBUILDNAME=${build_name} -DSITE=${site_name}'
+python setup.py --fc=ifort --cc=icc --cxx=icpc --type=debug --python=$PYTHON --cmake-options='-DBUILDNAME=${build_name} -DSITE=${site_name}' --boost-headers='/home/easybuild/software/MPI/intel/2015.1.133-GCC-4.9.2/impi/5.0.2.044/Boost/1.58.0-Python-2.7.9/include' --boost-libraries='/home/easybuild/software/MPI/intel/2015.1.133-GCC-4.9.2/impi/5.0.2.044/Boost/1.58.0-Python-2.7.9/lib'
 
 cd $TMP_DIR/build
 
